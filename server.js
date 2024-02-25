@@ -49,7 +49,7 @@ app.use(cors({
 //********************Package********************************** */
   app.use('/authenticate',AuthenticateRoute)
 
-  app.use('/lists',listRoute)
+  app.use('/lists',listRoutes)
 
   app.use('/login',LoginRoute)
 
