@@ -12,7 +12,6 @@ const createUser = async (req, res, next) => {
             });
             await user.save();
             req.User = user;
-            console.log({end:'I have created user'});
             next();
         }else if(verifiedUser?._id) {
             next();

@@ -69,7 +69,6 @@ const ArtistSongs = async(req,res)=>{
           Duration = `3:${seconds < 10 ? `0${seconds}` : `${seconds}`}`
         }
         if(inputDuration > 0){
-          console.log('track duration : ',inputDuration)
 
           let minutes = Math.floor(inputDuration / 60);
 
