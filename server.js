@@ -30,7 +30,8 @@ const ArtistsRoute = require('./Routes/ArtistRoute');
 const AlbumRoute = require('./Routes/AlbumRoute');
 const packageRoute = require('./Routes/Packageroute');
 const PlaylistRoutes = require('./Routes/PlaylistRoutes');
-const listRoute = require('./Routes/ListRoute');
+// const listRoute = require('./Routes/ListRoute');
+const listRoutes = require('./Routes/listRoute') 
 const SearchRoute = require('./Routes/SearchRoute');
 /******************************************************************************************/
 
