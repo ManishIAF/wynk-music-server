@@ -30,21 +30,19 @@ const ArtistsRoute = require('./Routes/ArtistRoute');
 const AlbumRoute = require('./Routes/AlbumRoute');
 const packageRoute = require('./Routes/Packageroute');
 const PlaylistRoutes = require('./Routes/PlaylistRoutes');
-// const listRoute = require('./Routes/ListRoute');
 const listRoutes = require('./Routes/listRoute') 
 const SearchRoute = require('./Routes/SearchRoute');
 /******************************************************************************************/
 
 
 app.use(cors({
-  origin:['http://localhost:3000','https://wynk-music-886fb.web.app'],
+  origin:['http://localhost:3000',process.env.FR_URI],
   credentials: true,
   optionsSuccessStatus: 200,
   Headers:['Origin','X-Api-Key','X-Requested-With','Content-Type','Accept','Authorization']
 }));
 
 // const he = require('he');
-
 
 //********************Package********************************** */
   app.use('/authenticate',AuthenticateRoute)
