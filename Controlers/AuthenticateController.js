@@ -1,6 +1,5 @@
 const Authenticate = async(req, res) => {
     try {
-
         const user = req?.User;
         const decodedData = req?.decodedData;
 

@@ -7,7 +7,6 @@ const JustACall = async(req,res) => {
 }
 
 const albumById = async(req,res) => {
-  
   const {id} = req.params;
   const album = await CollectionModel.findOne({type:'Album',_id:id}).populate('Song_Ids');
 

@@ -64,13 +64,6 @@ app.use(cors({
   app.use('/search',SearchRoute);
 //************************************************************* */ 
 
-// app.get('/song/:id',(req,res)=>{
-//   const {id} = req.params;
-//   const song = Songs?.find(song=>{return song?.id === id})
-//   res.send({song:`https://musicapi.x007.workers.dev/fetch?id=${id}`,id:id,img:song?.img,title:song?.title,artist:song?.artist,album:song?.album});
-  
-// })
-
 app.listen(8000,()=>{
   DB_Connection().then((result)=>{
     console.log(result)

@@ -4,7 +4,7 @@ const getUserPlaylist = async(req,res)=>{
     const {_id} = req.User;
 
     const Data = await userPlaylistModel.findOne({userId:_id});
-console.log(Data);
+
     res.send(Data?.playlists);
 }
 
