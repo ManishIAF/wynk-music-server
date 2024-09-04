@@ -1,3 +1,4 @@
+const serverless = require('serverless-http');
 const express = require('express');
 const app = express();
 
@@ -15,12 +16,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-app.use(morgan('tiny')); //to log all the http request in console
-app.disable('x-powered-by'); //less hackers know about our stack
-// const https = require('https');
-// const fs = require('fs');
-
-// const ffmpeg = require('fluent-ffmpeg');
+app.use(morgan('tiny')); 
+app.disable('x-powered-by'); 
 
 /******************************Calling Routes*********************************************/
 const AuthenticateRoute = require('./Routes/AuthenticateRoute');
@@ -70,3 +67,5 @@ app.listen(8000,()=>{
     console.log('server started')
   })
 })
+
+module.exports = app;
